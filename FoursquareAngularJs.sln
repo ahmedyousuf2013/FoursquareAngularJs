@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30621.155
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FoursquareAngularJs.Data", "FoursquareAngularJs.Data\FoursquareAngularJs.Data.csproj", "{657862EB-A73D-42DE-B4A6-B603D62A47C7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FoursquareAngularJs", "FoursquareAngularJs\FoursquareAngularJs.csproj", "{AAEB5523-8E50-44BD-965F-97563F248138}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{657862EB-A73D-42DE-B4A6-B603D62A47C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{657862EB-A73D-42DE-B4A6-B603D62A47C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{657862EB-A73D-42DE-B4A6-B603D62A47C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{657862EB-A73D-42DE-B4A6-B603D62A47C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AAEB5523-8E50-44BD-965F-97563F248138}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AAEB5523-8E50-44BD-965F-97563F248138}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AAEB5523-8E50-44BD-965F-97563F248138}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AAEB5523-8E50-44BD-965F-97563F248138}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F32B2C7D-8B1B-4980-9E26-96DC292CFBD3}
+	EndGlobalSection
+EndGlobal
