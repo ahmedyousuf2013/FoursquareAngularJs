@@ -6,9 +6,11 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Http.Cors;
 
 namespace FoursquareAngularJs.Controllers
 {
+    //[EnableCors(origins: "*", headers: "*", methods: "*")]
     public class CountriesController : BaseApiController
     {
 
@@ -29,7 +31,7 @@ namespace FoursquareAngularJs.Controllers
         {
             IQueryable<Countries> query;
 
-            query = countriesRepository.Get().OrderByDescending(b => b.Id);
+            query = countriesRepository.Get().OrderBy(b => b.Id);
 
             var totalCount = query.Count();
             var totalPages = (int)Math.Ceiling((double)totalCount / pageSize);
@@ -46,9 +48,33 @@ namespace FoursquareAngularJs.Controllers
                          .Skip(pageSize * page)
                          .Take(pageSize)
                          .ToList();
-
-
             return results;
+
+        }
+
+        [HttpPost]
+        public Countries Create(Countries countries) 
+        {
+            countriesRepository.Insert(countries);
+
+            return countries;
+        
+        }
+
+        [HttpPost]
+        public Countries Update(Countries countries)
+        {
+            countriesRepository.Update(countries);
+
+            return countries;
+
+        }
+        [HttpPost]
+        public Countries Delete( int id)
+        {
+          var countries=  countriesRepository.Delete(id);
+
+            return countries;
 
         }
     }
