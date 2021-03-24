@@ -7,6 +7,7 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using System.Web.Http.Cors;
+using System.Web.Http.OData;
 
 namespace FoursquareAngularJs.Controllers
 {
@@ -27,7 +28,15 @@ namespace FoursquareAngularJs.Controllers
         }
 
         [HttpGet]
-        public IEnumerable<Countries> Get( int skip= 0, int pageSize = 5)
+        [EnableQuery]
+
+        public IEnumerable<Countries> GetByOdata() {
+
+            return countriesRepository.Get();
+        }
+
+
+        public IEnumerable<Countries> Get(int skip = 0, int pageSize = 5)
         {
             IQueryable<Countries> query;
 
