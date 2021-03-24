@@ -11,6 +11,8 @@ using System.Web.Http.OData;
 
 namespace FoursquareAngularJs.Controllers
 {
+
+  ///  https://www.telerik.com/kendo-vue-ui/components/datasource/datasource/data-binding/
     //[EnableCors(origins: "*", headers: "*", methods: "*")]
     public class CountriesController : BaseApiController
     {
