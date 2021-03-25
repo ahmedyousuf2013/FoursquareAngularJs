@@ -12,7 +12,12 @@ using System.Web.Http.OData;
 namespace FoursquareAngularJs.Controllers
 {
 
-  ///  https://www.telerik.com/kendo-vue-ui/components/datasource/datasource/data-binding/
+
+    ////http://ads-medical:9000/HTML_BS_C.html
+
+    /////https://bitoftech.net/2014/01/13/tutorial-for-building-spa-using-angularjs-example/
+
+    ///  https://www.telerik.com/kendo-vue-ui/components/datasource/datasource/data-binding/
     //[EnableCors(origins: "*", headers: "*", methods: "*")]
     public class CountriesController : BaseApiController
     {
@@ -21,18 +26,19 @@ namespace FoursquareAngularJs.Controllers
         {
 
         }
-       
+
         private readonly ICountriesRepository countriesRepository;
 
         public CountriesController(ICountriesRepository _countriesRepository)
         {
-            countriesRepository= _countriesRepository;
+            countriesRepository = _countriesRepository;
         }
 
         [HttpGet]
         [EnableQuery]
 
-        public IEnumerable<Countries> GetByOdata() {
+        public IEnumerable<Countries> GetByOdata()
+        {
 
             return countriesRepository.Get();
         }
@@ -64,12 +70,12 @@ namespace FoursquareAngularJs.Controllers
         }
 
         [HttpPost]
-        public Countries Create(Countries countries) 
+        public Countries Create(Countries countries)
         {
             countriesRepository.Insert(countries);
 
             return countries;
-        
+
         }
 
         [HttpPost]
@@ -81,9 +87,9 @@ namespace FoursquareAngularJs.Controllers
 
         }
         [HttpPost]
-        public Countries Delete( int id)
+        public Countries Delete(int id)
         {
-          var countries=  countriesRepository.Delete(id);
+            var countries = countriesRepository.Delete(id);
 
             return countries;
 
