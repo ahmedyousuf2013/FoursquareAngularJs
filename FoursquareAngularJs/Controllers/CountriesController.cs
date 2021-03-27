@@ -38,6 +38,10 @@ namespace FoursquareAngularJs.Controllers
         }
 
 
+
+
+
+
         public IEnumerable<Countries> Get(int skip = 0, int pageSize = 5)
         {
             IQueryable<Countries> query;
