@@ -25,12 +25,14 @@ namespace FoursquareAngularJs.Data
 
 
         public DbSet<Countries>  Countries { get; set; }
+        public DbSet<User> Users { get; set; }
 
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Configurations.Add(new CountriesMapper());
             modelBuilder.Configurations.Add(new BookmarkedPlaceMapper());
+            modelBuilder.Configurations.Add(new UserMapper());
  
 
             base.OnModelCreating(modelBuilder);

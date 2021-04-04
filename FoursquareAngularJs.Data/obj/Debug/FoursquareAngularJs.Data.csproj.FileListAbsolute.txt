@@ -17,8 +17,6 @@ D:\Github\FoursquareAngularJs\FoursquareAngularJs.Data\bin\Debug\EntityFramework
 D:\Github\FoursquareAngularJs\FoursquareAngularJs.Data\bin\Debug\EntityFramework.SqlServer.dll
 D:\Github\FoursquareAngularJs\FoursquareAngularJs.Data\bin\Debug\EntityFramework.xml
 D:\Github\FoursquareAngularJs\FoursquareAngularJs.Data\bin\Debug\EntityFramework.SqlServer.xml
-D:\Github\FoursquareAngularJs\FoursquareAngularJs.Data\obj\Debug\FoursquareAngularJs.Data.csprojAssemblyReference.cache
-D:\Github\FoursquareAngularJs\FoursquareAngularJs.Data\obj\Debug\FoursquareAngularJs.Data.csproj.CoreCompileInputs.cache
-D:\Github\FoursquareAngularJs\FoursquareAngularJs.Data\obj\Debug\FoursquareAngularJs.Data.csproj.CopyComplete
+D:\Github\FoursquareAngularJs\FoursquareAngularJs.Data\obj\Debug\FoursquareAngularJs.Data.csprojResolveAssemblyReference.cache
 D:\Github\FoursquareAngularJs\FoursquareAngularJs.Data\obj\Debug\FoursquareAngularJs.Data.dll
 D:\Github\FoursquareAngularJs\FoursquareAngularJs.Data\obj\Debug\FoursquareAngularJs.Data.pdb

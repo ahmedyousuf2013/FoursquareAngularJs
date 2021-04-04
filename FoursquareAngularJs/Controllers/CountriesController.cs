@@ -44,7 +44,7 @@ namespace FoursquareAngularJs.Controllers
         }
 
 
-        public IEnumerable<Countries> Get(int skip = 0, int pageSize = 5)
+        public IEnumerable<Countries> Get(int Take = 0, int pageSize = 5)
         {
             IQueryable<Countries> query;
 
@@ -62,7 +62,7 @@ namespace FoursquareAngularJs.Controllers
                                                                 Newtonsoft.Json.JsonConvert.SerializeObject(paginationHeader));
 
             var results = query
-                         .Skip(skip)
+                         .Skip(Take* pageSize)
                          .Take(pageSize)
                          .ToList();
             return results;

@@ -17,7 +17,7 @@ app.controller('myPlacesController', function ($scope, placesDataService) {
 
     function getUserPlaces() {
 
-        debugger;
+        
 
         var userInCtx = placesDataService.getUserInContext();
 
@@ -44,7 +44,7 @@ app.controller('myPlacesController', function ($scope, placesDataService) {
 
 
         placesDataService.getUserPlaces("test", $scope.currentPage - 1, $scope.pageSize).then(function (results) {
-            debugger;
+            
             $scope.myPlaces = results.data;
 
             var paginationHeader = angular.fromJson(results.headers("x-pagination"));

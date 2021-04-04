@@ -1,7 +1,7 @@
 ﻿'use strict';
 app.controller('placesExplorerController', function ($scope, placesExplorerService, placesPhotosService, placesDataService, $filter, $modal) {
 
-    debugger;
+    
     $scope.exploreNearby = "New York";
     $scope.exploreQuery = "";
     $scope.filterValue = "";
@@ -25,7 +25,7 @@ app.controller('placesExplorerController', function ($scope, placesExplorerServi
 
     function getPlaces() {
 
-        debugger;
+        
        var offset = ($scope.pageSize) * ($scope.currentPage - 1);
 
         placesExplorerService.get({ near: $scope.exploreNearby, query: $scope.exploreQuery, limit: $scope.pageSize, offset: offset }, function (placesResult) {
@@ -108,8 +108,9 @@ app.controller('placesExplorerController', function ($scope, placesExplorerServi
 
     $scope.bookmarkPlace = function (venue) {
 
-        if (!placesDataService.getUserInContext()) {
-
+        debugger
+     //   if (!placesDataService.getUserInContext()) {
+        if (true) {
             var modalInstance = $modal.open({
                 templateUrl: 'app/views/userprofile.html',
                 controller: 'userContextController',

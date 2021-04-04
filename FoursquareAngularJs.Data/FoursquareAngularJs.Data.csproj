@@ -54,12 +54,15 @@
     <Compile Include="CountriesRepository.cs" />
     <Compile Include="Entities\BookmarkedPlace.cs" />
     <Compile Include="Entities\Countries.cs" />
+    <Compile Include="Entities\User.cs" />
     <Compile Include="FourSquareContext.cs" />
     <Compile Include="FourSquareContextMigrationConfiguration.cs" />
     <Compile Include="FourSquareRepository.cs" />
     <Compile Include="Mappers\BookmarkedPlaceMapper.cs" />
     <Compile Include="Mappers\CountriesMapper.cs" />
+    <Compile Include="Mappers\UserMapper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UsersRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

@@ -1,6 +1,7 @@
 ﻿using Autofac;
 using Autofac.Integration.WebApi;
 using FoursquareAngularJs.Data;
+using FoursquareAngularJs.Data.Entities;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -51,6 +52,11 @@ namespace FoursquareAngularJs.App_Start
             builder.RegisterType<CountriesRepository>()
                   .As<ICountriesRepository>()
                   .InstancePerRequest();
+
+            builder.RegisterType<UsersRepository>()
+                .As<IUsersRepository>()
+                .InstancePerDependency();
+
             //Set the dependency resolver to be Autofac.  
             Container = builder.Build();
 

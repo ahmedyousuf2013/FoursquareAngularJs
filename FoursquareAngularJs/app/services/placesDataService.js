@@ -1,19 +1,29 @@
 ﻿'use strict';
 app.factory('placesDataService', function ($http, toaster) {
 
-    debugger;
-    var serviceBase = 'https://localhost:44372/api/places/';
+    
+    var serviceBase = 'https://localhost:44372/api/';
     var placesDataFactory = {};
     var userInContext = null;
 
-    var _getUserInCtx = function () {
-        debugger
-        return userInContext;
-    };
+    //var _getUserInCtx = function () {
+        
+    //    return userInContext;
+    //};
 
     var _setUserInCtx = function (userInCtx) {
 
+        debugger
         userInContext = userInCtx;
+        $http.post(serviceBase + 'users/create', JSON.stringify(userInCtx)).then(function (response) {
+
+            console.log(response.data);
+
+
+        })
+
+      
+
 
     };
 
@@ -51,8 +61,8 @@ app.factory('placesDataService', function ($http, toaster) {
 
     var _getUserPlaces = function (userName, pageIndex, pageSize) {
 
-        return $http.get(serviceBase +'get', { params: { username: userName, page: pageIndex, pageSize: pageSize } }).then(function (results) {
-            debugger
+        return $http.get(serviceBase + 'places/get', { params: { username: userName, page: pageIndex, pageSize: pageSize } }).then(function (results) {
+            
             return results;
         });
     };
@@ -65,7 +75,7 @@ app.factory('placesDataService', function ($http, toaster) {
     };
 
 
-    placesDataFactory.getUserInContext = _getUserInCtx;
+   // placesDataFactory.getUserInContext = _getUserInCtx;
     placesDataFactory.setUserInContext = _setUserInCtx;
     placesDataFactory.getUserPlaces = _getUserPlaces;
     placesDataFactory.userExists = _userExists; 

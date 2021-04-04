@@ -20,13 +20,12 @@ app.config(function ($routeProvider) {
         controller: "myPlacesController",
         templateUrl: "/app/views/myplaces.html"
     });
-
-
-    $routeProvider.when("/places", {
-        controller: "myPlacesController",
-        templateUrl: "/app/views/myplaces.html"
+    $routeProvider.when("/Users", {
+        controller: "usersController",
+        templateUrl: "/app/views/Users.html"
     });
 
+   
     
     $routeProvider.when("/countries", {
         controller: "countriesController",

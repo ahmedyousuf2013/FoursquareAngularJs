@@ -1,7 +1,7 @@
 ﻿'use strict';
 app.controller('countriesController', function ($scope, $filter, $modal, CountriesDataService) {
 
-    debugger
+    
     $scope.exploreNearby = "USA";
     $scope.exploreQuery = "";
     $scope.filterValue = "";
@@ -31,7 +31,7 @@ app.controller('countriesController', function ($scope, $filter, $modal, Countri
 
 
         CountriesDataService.getCountries( $scope.currentPage - 1, $scope.pageSize).then(function (results) {
-            debugger;
+            
             $scope.Countries = results.data;
 
             var paginationHeader = angular.fromJson(results.headers("x-pagination"));
